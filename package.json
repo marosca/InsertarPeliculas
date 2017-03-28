@@ -1,5 +1,5 @@
 {
-    "name": "all_together_now",
+    "name": "challenger1",
     "version": "0.1.0",
     "description": "Using the MongoDB driver together with route handling and templates",
     "main": "app.js",
@@ -9,6 +9,5 @@
         "mongodb": "~2.2.25",
         "nunjucks": "~2.2.0"
     },
-    "author": "Shannon Bradshaw",
-    "license": "0BSD"
+    "author": "Mariola Moreno"
 }

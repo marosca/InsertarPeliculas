@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Add Movie</title>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+	<!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+	<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+	<style>
+	.page-header {
+    margin: 0 0 20px;
+ }
+	p[class^='bg-']{
+	padding: 15px;
+    text-align: center;
+    width: 50%;
+    margin: 0 auto;
+	}
+	</style>
+</head>
+<body>
+
+	<div class="page-header bg-primary text-center">
+		<div class="container">
+			<h1>Insert Movie</h1>
+			<p>Please, fill the form below to insert a movie in the data base</p>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-md-8 col-md-offset-2">
+				<form class="form-horizontal" action="/" method="POST">
+					<div class="form-group">
+						<label for="title" class="col-sm-2 control-label">Title</label>
+						<div class="col-sm-10">
+							<input type="text" class="form-control" id="title" name="title" placeholder="title" value="{{obj.title}}">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="year" class="col-sm-2 control-label">Year</label>
+						<div class="col-sm-10">
+							<input type="text" class="form-control" id="year" name="year" placeholder="year" value="{{obj.year}}">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="imdb" class="col-sm-2 control-label">Imdb code</label>
+						<div class="col-sm-10">
+							<input type="text" class="form-control" id="imdb" name="imdb" placeholder="imdb" value="{{obj.imdb}}">
+						</div>
+					</div>
+
+					<div class="form-group">
+						<div class="col-sm-offset-2 col-sm-10">
+							<button type="submit" class="btn btn-primary pull-right">Send Movie</button>
+						</div>
+					</div>
+				</form>
+
+				{% if complete %}
+				<div>
+				<p class="bg-success">La pelicula <strong>"{{title}}"</strong> ha sido añadida</p>
+				</div>
+				{% endif %}
+
+				{% if error %}
+				<div>
+				<p class="bg-danger">{{error}}</p>
+				</div>
+				{% endif %}
+
+			</div>
+		</div>
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</body>
+</html>

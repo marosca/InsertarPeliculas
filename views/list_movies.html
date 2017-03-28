@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Add Movie</title>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+	<!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+	<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+	<style>
+	.page-header {
+    margin: 0 0 20px;
+ }
+	p[class^='bg-']{
+	padding: 15px;
+    text-align: center;
+    width: 50%;
+    margin: 0 auto;
+	}
+	</style>
+</head>
+<body>
+
+	<div class="page-header bg-primary text-center">
+		<div class="container">
+			<h1>List of movies</h1>
+			<p>Here you can see all the films</p>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-md-8 col-md-offset-2">
+				<ul>
+					{% for movie in movies %}
+					<li><a href="#">{{movie.Title}}</a></li>
+					{% endfor %}
+				</ul>
+
+			
+
+				{% if error %}
+				<div>
+				<p class="bg-danger">{{error}}</p>
+				</div>
+				{% endif %}
+
+			</div>
+		</div>
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</body>
+</html>

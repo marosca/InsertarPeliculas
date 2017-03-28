@@ -66,10 +66,10 @@ function errorHandler(err, req, res, next) {
 		app.use(function(req, res){
 			res.sendStatus(404);
 		});
-		// var server = app.listen(80, function() {
-		// 	var port = server.address().port;
-		// 	console.log('Express server escuchando en %s.', port);
-		// });
+		var server = app.listen(80, function() {
+			var port = server.address().port;
+			console.log('Express server escuchando en %s.', port);
+		});
 
 
 	});

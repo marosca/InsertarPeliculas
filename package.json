@@ -2,7 +2,13 @@
     "name": "challenger1",
     "version": "0.1.0",
     "description": "Using the MongoDB driver together with route handling and templates",
+    "engines": {
+      "node": "5.9.1"
+    },
     "main": "app.js",
+    "scripts": {
+      "start": "node app.js"
+    },
     "dependencies": {
         "consolidate": "~0.13.1",
         "express": "~4.13.3",

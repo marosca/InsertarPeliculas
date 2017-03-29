@@ -13,7 +13,7 @@ app.set('views', __dirname + '/views');
 app.use(bodyParser.urlencoded({ extended: true }));
 
 var urlLocal ='mongodb://localhost:27017/video';
-var urlAtlas = 'mongodb://perdisita:01062011Perdisita@perdisita-shard-00-00-bmzl8.mongodb.net:27017,perdisita-shard-00-01-bmzl8.mongodb.net:27017,perdisita-shard-00-02-bmzl8.mongodb.net:27017/video?ssl=true&replicaSet=perdisita-shard-0&authSource=admin';
+
 
 // Handler for internal server errors
 function errorHandler(err, req, res, next) {
